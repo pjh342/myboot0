@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="upload.UploadDAO">
+
+<insert id="insertFiles" parameterType="upload.UploadVO">
+insert into files values(#{name}, #{description}, #{filename1}, #{filename2})
+</insert>
+
+<select id ="selectFiles" resultType="uploadVO" parameterType="String">
+select filename1, filename2 from files where name=#{name}
+</select>
+
+
+
+
+
+
+
+</mapper>
+
+
+
